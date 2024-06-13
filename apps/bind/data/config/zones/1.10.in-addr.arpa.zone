@@ -1,0 +1,66 @@
+; Make sure to update the epoch time in the SOA records so coreDNS picks up the changes automatically
+; https://www.epochconverter.com/
+
+; SOA Records
+$TTL 3600
+$ORIGIN 1.10.in-addr.arpa.
+@ 3600 IN SOA gateway.kvshs.xyz. gateway.kvshs.xyz. (
+  1710599597         ; serial number (epoch timestamp)
+  7200               ; refresh period
+  3600               ; retry period
+  1209600            ; expire time
+  3600               ; minimum ttl
+)
+
+; NS Records
+@                          IN  NS gateway.kvshs.xyz.
+
+; Reset origin
+$ORIGIN in-addr.arpa.
+
+; LAN
+1.0.1.10                   IN  PTR  gateway.kvshs.xyz.
+
+; Servers
+6.1.1.10                  IN  PTR  kiwi.kvshs.xyz.
+7.1.1.10                  IN  PTR  banana.kvshs.xyz.
+8.1.1.10                  IN  PTR  honeydew.kvshs.xyz.
+9.1.1.10                  IN  PTR  fig.kvshs.xyz.
+10.1.1.10                 IN  PTR  ilama.kvshs.xyz.
+11.1.1.10                 IN  PTR  hawthorneberry.kvshs.xyz.
+12.1.1.10                 IN  PTR  mediabox.kvshs.xyz.
+31.1.1.10                 IN  PTR  mango.kvshs.xyz.
+32.1.1.10                 IN  PTR  melon.kvshs.xyz.
+33.1.1.10                 IN  PTR  nectarine.kvshs.xyz.
+
+; Trusted
+21.2.1.10                 IN  PTR  raiko-hpl.kvshs.xyz.
+22.2.1.10                 IN  PTR  raiko-hpl-w.kvshs.xyz.
+23.2.1.10                 IN  PTR  michelles-mbp.kvshs.xyz.
+24.2.1.10                 IN  PTR  michelles-mbp-w.kvshs.xyz.
+31.2.1.10                 IN  PTR  raiko-pixel-pro6.kvshs.xyz.
+32.2.1.10                 IN  PTR  micho-iphone.kvshs.xyz.
+33.2.1.10                 IN  PTR  micho-iphone-pri.kvshs.xyz.
+34.2.1.10                 IN  PTR  raiko-fire7.kvshs.xyz.
+35.2.1.10                 IN  PTR  raiko-kobo.kvshs.xyz.
+
+; IOT
+51.3.1.10                 IN  PTR  lgtv-sittingroom-lan.kvshs.xyz.
+52.3.1.10                 IN  PTR  lgtv-bedroom-lan.kvshs.xyz.
+53.3.1.10                 IN  PTR  nitendo-switch.kvshs.xyz.
+54.3.1.10                 IN  PTR  xbox-lan.kvshs.xyz.
+55.3.1.10                 IN  PTR  echo-show-5.kvshs.xyz.
+56.3.1.10                 IN  PTR  echo-show-8.kvshs.xyz.
+57.3.1.10                 IN  PTR  xbox-wifi.kvshs.xyz.
+58.3.1.10                 IN  PTR  lgtv-sittingroom-wifi.kvshs.xyz.
+59.3.1.10                 IN  PTR  lgtv-bedroom-wifi.kvshs.xyz.
+60.3.1.10                 IN  PTR  study-printer.kvshs.xyz.
+61.3.1.10                 IN  PTR  grapefruit.kvshs.xyz.
+
+; VIDEO
+41.4.1.10                 IN  PTR  ring-doorbell.kvshs.xyz.
+42.4.1.10                 IN  PTR  ringstickupcam-garden.kvshs.xyz.
+43.4.1.10                 IN  PTR  ringstickupcam-landing.kvshs.xyz.
+44.4.1.10                 IN  PTR  ringstickupcam-kitchen.kvshs.xyz.
+45.4.1.10                 IN  PTR  ringindoorcam-sitting-room.kvshs.xyz.
+46.4.1.10                 IN  PTR  ringfloodlightcam-drive.kvshs.xyz.

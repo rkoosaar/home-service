@@ -59,6 +59,6 @@ serversTransport:
 http:
   routers:
     dashboard:
-      rule: Host(`traefik.turbo.ac`)
+      rule: Host(`traefik.kvshs.xyz`)
       entryPoints: ["web"]
       service: api@internal
