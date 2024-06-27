@@ -23,6 +23,7 @@ gateway                       IN  A  10.1.0.1
 ns                            IN  A  10.5.0.4
 unifi                         IN  A  10.5.0.10
 pihole                        IN  A  10.5.0.8
+traefik                       IN  A  10.1.0.176
 
 ; Servers
 kiwi                          IN  A     10.1.1.6
