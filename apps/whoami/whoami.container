@@ -4,14 +4,14 @@ After=network-online.target
 Wants=network-online.target
 
 [Container]
-AddCapability=NET_BIND_SERVICE
 ContainerName=whoami
 Environment=TZ=Europe/London
+IP=10.1.0.177
 Image=docker.io/traefik/whoami:latest
 Label="traefik.enable=true"
 Label="traefik.http.routers.whoami.rule=Host(`traefik.kvshs.xyz/whoami`)"
 Label="traefik.http.routers.whoami.tls=true"
-Network=host
+Network=containernet
 
 [Service]
 Restart=always
