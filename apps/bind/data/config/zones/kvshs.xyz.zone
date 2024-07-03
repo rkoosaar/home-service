@@ -24,7 +24,7 @@ ns                            IN  A  10.5.0.4
 unifi                         IN  A  10.5.0.10
 pihole                        IN  A  10.5.0.8
 traefik                       IN  A  10.1.0.176
-
+whoami                        IN  A  10.1.0.177
 ; Servers
 kiwi                          IN  A     10.1.1.6
 banana                        IN  A     10.1.1.7
