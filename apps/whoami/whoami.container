@@ -8,9 +8,11 @@ ContainerName=whoami
 Environment=TZ=Europe/London
 IP=10.1.0.177
 Image=docker.io/traefik/whoami:latest
+Label="traefik.docker.network=web"
+Label="traefik.port=80"
 Label="traefik.enable=true"
-Label="traefik.http.routers.whoami.rule=Host(`traefik.kvshs.xyz/whoami`)"
-Label="traefik.http.routers.whoami.tls=true"
+Label="traefik.backend=whoami"
+Label="traefik.frontend.rule=Host:traefik.kvshs.xyz/whoami"
 Network=containernet
 
 [Service]
