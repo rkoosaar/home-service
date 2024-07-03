@@ -178,3 +178,7 @@ tasks:
             https://raw.githubusercontent.com/go-task/task/main/completion/fish/task.fish
     preconditions:
       - *not-root
+
+  ips:
+    desc: Get container IPs
+    cmd: ./hack/ipvlanaddrs.sh
