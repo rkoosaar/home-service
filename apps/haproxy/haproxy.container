@@ -7,7 +7,7 @@ Wants=network-online.target
 ContainerName=haproxy
 Environment=TZ=Europe/London
 IP=10.1.0.172
-Image=docker.io/library/haproxy:2.9.8@sha256:076687237643f1150908353536370fce913ba6300c51e0ccb90b59302b1f32aa
+Image=docker.io/library/haproxy:2.9.9@sha256:ef8ceafed9d4e88ec7a3198d18cebdfb3c6a0af134f03ec0eaeda13572b1b262
 Network=containernet
 Volume=./haproxy/config/haproxy.cfg:/usr/local/etc/haproxy/haproxy.cfg:ro
 

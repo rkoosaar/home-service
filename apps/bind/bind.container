@@ -9,7 +9,7 @@ ContainerName=bind
 Environment=BIND9_USER=root
 Environment=TZ=Europe/London
 IP=10.1.0.173
-Image=docker.io/ubuntu/bind9:9.18-22.04_beta@sha256:1dc6d428e149fcba4a43894e15f229c65c34180ab7c7010e94667ea46877f5ea
+Image=docker.io/ubuntu/bind9:9.18-22.04_beta@sha256:d31acc46a5c43c12be091ce2b49deb3a17a906cc153d9ce821966875444b9150
 Network=containernet
 Volume=./bind/cache:/var/cache/bind
 Volume=./bind/config:/etc/bind:ro
