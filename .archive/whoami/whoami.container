@@ -1,0 +1,23 @@
+[Unit]
+Description=whoami
+After=network-online.target
+Wants=network-online.target
+
+[Container]
+ContainerName=whoami
+Environment=TZ=Europe/London
+IP=10.1.0.177
+Image=docker.io/traefik/whoami:latest
+Label="traefik.enable=true"
+Label="traefik.http.routers.whoami.rule=Host(`whoami.kvshs.xyz`)"
+Label="traefik.http.routers.whoami.entrypoints=websecure"
+Label="traefik.http.routers.whoami.tls=true"
+
+Network=containernet
+
+[Service]
+Restart=always
+TimeoutStartSec=900
+
+[Install]
+WantedBy=multi-user.target default.target
