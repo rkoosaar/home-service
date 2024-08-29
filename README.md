@@ -66,9 +66,9 @@ My home service stack running on a [Beelink EQ12](https://www.bee-link.com/eq12-
     📍 _Setting the DNS server to a container used on this system might make dragons appear 🐉._
 
     ```sh
-    sudo bash -c 'cat << EOF > /etc/systemd/network/enp1s0.network
+    sudo bash -c 'cat << EOF > /etc/systemd/network/enp6s18.network
     [Match]
-    Name = enp1s0
+    Name = enp6s18
     [Network]
     DHCP = yes
     DNS = 1.1.1.1
